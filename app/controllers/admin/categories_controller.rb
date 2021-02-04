@@ -4,13 +4,12 @@ class Admin::CategoriesController < ApplicationController
   
   def index
     @categories = Category.order(id: :asc).all
-    # raise @categories.inspect
   end
-
+  
   def new
-    @categories = Category.new
+    @category = Category.new
   end
-
+  
   def create
     @category = Category.new(category_params)
 
