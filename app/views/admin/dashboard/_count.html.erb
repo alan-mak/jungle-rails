@@ -1,13 +1,23 @@
 <div>
   <table class="table table-bordered">
-    <thead>
+    <thead class="dash_table">
       <tr>
         <th>Product Count</th>
-        <th>Category Count</th>
+        <td>
+          <%= @product_count %>
+        </td>
+        <td>
+          <%= link_to "View", [:admin, :products], class: "btn btn-primary" %>
+        </td>
       </tr>
       <tr>
-        <td><%= @product_count %></td>
-        <td><%= @category_count %></td>
+        <th>Category Count</th>
+        <td>
+          <%= @category_count %>
+        </td>
+        <td>
+          <%= link_to "View", [:admin, :categories], class: "btn btn-primary" %>
+        </td>
       </tr>
     </thead>
   </table>
