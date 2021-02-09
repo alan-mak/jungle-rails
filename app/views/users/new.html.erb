@@ -2,36 +2,41 @@
   <h1>Register</h1>
 </header>
 
-<div class="col-sm-2">
-  <%= form_for @user, url: '/users' do |form| %>
-    <% #raise form.inspect%>
-    <% if form.object.errors.any? %>
-          <div class="alert alert-danger">
-            <strong>The following errors prevented saving:</strong>
-            <ul>
-              <% form.object.errors.full_messages.each do |error| %>
-                <li><%= error %></li>
-              <% end %>
-            </ul>
-          </div>
-        <% end %>
+<div class="row">
+  <div class="col-sm-12">
+    <%= form_for @user, url: '/users' do |form| %>
+      <% #raise form.inspect%>
+      <% if form.object.errors.any? %>
+            <div class="alert alert-danger">
+              <strong>The following errors prevented  saving:</strong>
+              <ul>
+                <% form.object.errors.full_messages.each do | error| %>
+                  <li><%= error %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
 
-    <div class="form-group">
-      Name: <%= form.text_field :name %>
-    </div>
-    <div class="form-group">
-      Email: <%= form.email_field :email %>
-    </div>
-    <div class="form-group">
-      Password: <%= form.password_field :password %>
-    </div>
-    <div class="form-group">
-      Password Confirmation: <%= form.password_field :password_confirmation %>
-    </div>
-    <div class="form-group">
-      <%= form.submit "Submit", class: "btn btn-info" %>
-    </div>
+      <div class="form-group">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+      <div class="form-group">
+        <%= form.label :email %>
+        <%= form.email_field :email %>
+      </div>
+      <div class="form-group">
+        <%= form.label :password %>
+        <%= form.password_field :password %>
+      </div>
+      <div class="form-group">
+        <%= form.label :password_confirmation %>
+        <%= form.password_field  :password_confirmation %>
+      </div>
+      <div class="form-group">
+        <%= form.submit "Submit", class: "btn btn-info" %>
+      </div>
 
-  <% end %>
+    <% end %>
+  </div>
 </div>
-
