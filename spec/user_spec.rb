@@ -67,5 +67,20 @@ RSpec.describe User, type: :model do
   end
 
   describe '.authenticate_with_credentials' do
+    it "Should login" do
+      @user = User.create(
+        :first_name => 'A',
+        :last_name => 'B',
+        :email => 'abc@gmail.com',
+        :password => 'abc',
+        :password_confirmation => 'abc')
+      login = User.authenticate_with_credentials(@user.email, @user.password)
+      expect(login).not_to be_nil
+    end
+
+    it "Should not login" do
+    login = User.authenticate_with_credentials("abc@gmail.com", "abc")
+    expect(login).to be_nil
+    end
   end
 end
