@@ -3,7 +3,19 @@
 </header>
 
 <div class="col-sm-2">
-  <%= form_for :user, url: '/users' do |form| %>
+  <%= form_for @user, url: '/users' do |form| %>
+    <% #raise form.inspect%>
+    <% if form.object.errors.any? %>
+          <div class="alert alert-danger">
+            <strong>The following errors prevented saving:</strong>
+            <ul>
+              <% form.object.errors.full_messages.each do |error| %>
+                <li><%= error %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
     <div class="form-group">
       Name: <%= form.text_field :name %>
     </div>
