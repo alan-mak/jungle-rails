@@ -23,13 +23,13 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "ad:07:81:6d:56:56:fe:72:e9:1c:12:60:99:32:bf:37"
+            - "01:1c:6f:02:3c:3f:12:9d:30:16:da:65:39:0d:2f:a2"
       - checkout
       - run:
           name: Push Master to Production
           command: |
             git push https://github.com/alan-mak/jungle-rails.git master:production
-            
+
 workflows:
   version: 2
   test_and_deploy:
