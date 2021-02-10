@@ -1,11 +1,11 @@
-version: 2.1
+version: 2
 orbs:
   ruby: circleci/ruby@0.1.2 
 
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.3.5-stretch-node
+      - image: circleci/ruby:2.3.5-stretch
     executor: ruby/default
     steps:
       - checkout
@@ -14,4 +14,3 @@ jobs:
            command: |
                 rvm install 2.3.5
                 echo . $(rvm 2.3.5 do rvm env --path) >> $BASH_ENV
-      - ruby/bundle-install
