@@ -11,7 +11,9 @@ jobs:
       - checkout
       - run:
           name: Set ruby version
-          command: echo "ruby-2.3.5" > ~/.ruby-version
+          command: |
+                rvm install 2.3.5
+                echo . $(rvm 2.3.5 do rvm env --path) >> $BASH_ENV
       - run: gem install bundler:2.1.4
       - run:
           name: Which bundler?
