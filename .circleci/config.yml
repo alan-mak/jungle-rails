@@ -10,6 +10,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Which bundler?
-          command: bundle -v
+           name: Set ruby version to 2.3.5
+           command: |
+                rvm install 2.3.5
+                echo . $(rvm 2.3.5 do rvm env --path) >> $BASH_ENV
       - ruby/bundle-install
