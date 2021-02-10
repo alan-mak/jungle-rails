@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Set ruby version
           command: echo "ruby-2.3.5" > ~/.ruby-version
-      - run: gem install bundler: 2.1.4
+      - run: gem install bundler:2.1.4
       - run:
           name: Which bundler?
           command: bundle -v
