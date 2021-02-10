@@ -6,19 +6,19 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 Home Page View With Products
 
-![Home Page]()
+![Home Page](https://github.com/alan-mak/jungle-rails/blob/master/docs/Main.png)
 
 Shopping Cart After Adding a Product
 
-![Cart]()
+![Cart](https://github.com/alan-mak/jungle-rails/blob/master/docs/Cart.png)
 
 Ordering With a Credit Card
 
-![Ordering]()
+![Ordering](https://github.com/alan-mak/jungle-rails/blob/master/docs/Order.png)
 
 Confirmation of Payment
 
-![Payment]()
+![Payment](https://github.com/alan-mak/jungle-rails/blob/master/docs/Confirmation.png)
 
 ## Setup
 
