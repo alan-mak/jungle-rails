@@ -2,6 +2,23 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Working Application
+
+Home Page View With Products
+
+![Home Page]()
+
+Shopping Cart After Adding a Product
+
+![Cart]()
+
+Ordering With a Credit Card
+
+![Ordering]()
+
+Confirmation of Payment
+
+![Payment]()
 
 ## Setup
 
@@ -17,6 +34,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
+Select a Month and Year of any future date and any 3 digits for the CVC
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
