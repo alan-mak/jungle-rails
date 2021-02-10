@@ -12,8 +12,20 @@ jobs:
       - run:
           name: Which bundler?
           command: bundle -v
+      - ruby/bundle-install
+
+  deploy:
+    machine:
+      enabled: true
+
+    working_directory: ~/client
+
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "ad:07:81:6d:56:56:fe:72:e9:1c:12:60:99:32:bf:37"
+      - checkout
       - run:
           name: Push Master to Production
           command: |
             git push https://github.com/alan-mak/jungle-rails.git master:production
-      - ruby/bundle-install
